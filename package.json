@@ -1,0 +1,29 @@
+{
+  "name": "svg-animator",
+  "version": "1.0.0",
+  "description": "Fast, dynamic inline SVG DOM injection library for CSS or JS svg animation.",
+  "main": "svg-animator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thierryc/svg-animator.git"
+  },
+  "keywords": [
+    "svg",
+    "animator",
+    "DOM",
+    "injection",
+    "CSS",
+    "animation",
+    "js",
+    "javascript"
+  ],
+  "author": "Thierry Charbonnel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thierryc/svg-animator/issues"
+  },
+  "homepage": "https://github.com/thierryc/svg-animator#readme"
+}
