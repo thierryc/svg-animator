@@ -10,6 +10,52 @@
 
   'use strict';
   
+  var isLocal = window.location.protocol === 'file:';
+  var hasSvgSupport = document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#BasicStructure', '1.1');
+  
+  var load = function(url, callback){
+  
+    if (!window.XMLHttpRequest) {
+      // Browser does not support XMLHttpRequest
+      callback(0);
+      return false;
+    }
+    
+    if (httpRequest.responseXML === null) {
+      // httpRequest.responseXML === null
+      callback(0);
+      return false;
+    }
+    
+    var httpRequest = new XMLHttpRequest();
+    
+    httpRequest.onreadystatechange = function () {
+        // readyState 4 = complete
+        if (httpRequest.readyState === 4) {
+        
+          switch (httpRequest.status) {
+          	case 404:
+          		// 404
+          		callback(404);
+          		break;
+          	
+          	case 200:
+          	  // httpRequest.responseXML.documentElement
+          	  callback(200, httpRequest.responseXML.documentElement);
+          	break;
+          	
+          	default:
+          		// error undefined
+          		callback(0);
+          }
+        
+        }
+        
+    }
+    
+  
+  };
+  
   /**
    * SVGAnimator
    *
@@ -24,6 +70,15 @@
   var SVGAnimator = function (elements, options, done) {
     // set default options
     options = options || {};
+    
+    elements.forEach(function(element){
+    
+      
+      // get Svg Url
+      // var svg = load(element.src);
+      
+    });
+    
     if (done && typeof done === 'function') {
       done(1);
     }
