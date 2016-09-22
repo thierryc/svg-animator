@@ -25,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/thierryc/svg-animator/issues"
   },
-  "homepage": "https://github.com/thierryc/svg-animator#readme"
+  "homepage": "https://github.com/thierryc/svg-animator#readme",
+  "dependencies": {
+    "cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-bump": "^2.4.0"
+  }
 }
